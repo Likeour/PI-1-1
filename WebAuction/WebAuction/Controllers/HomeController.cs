@@ -27,5 +27,13 @@ namespace WebAuction.Controllers
         {
             return View();
         }
+        public ActionResult Add_lot()
+        {
+            return View();
+        }
+        public ActionResult View_Admin()
+        {
+            return View();
+        }
     }
 }

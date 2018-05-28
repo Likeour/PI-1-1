@@ -186,6 +186,8 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\PageAuction.cshtml" />
+    <Content Include="Views\Home\Add_lot.cshtml" />
+    <Content Include="Views\Home\View_Admin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
