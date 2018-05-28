@@ -23,5 +23,9 @@ namespace WebAuction.Controllers
         {
             return View();
         }
+        public ActionResult PageAuction()
+        {
+            return View();
+        }
     }
 }
