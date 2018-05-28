@@ -10,7 +10,7 @@ namespace IntAuction.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View("~/Views/Some/Online_Auction_Websites.cshtml");
         }
 
         public ActionResult About()
