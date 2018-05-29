@@ -4,16 +4,40 @@
 }
 
 <h2>Привет, Вы попали на страницу Аукциона, делайте свои ставки</h2>
+
+<div>
+    <p class="head_filter">Выбрать товар:</p>
+    <div class="div_for_price">
+        <p>Цена:</p>
+        <select>
+            <option>Oт 100 грн.</option>
+            <option>От 200 грн.</option>
+            <option>Oт 300 грн.</option>
+        </select>
+    </div>
+    <div class="div_for_country">
+        <p>Cтрана производителя:</p>
+        <select>
+            <option>Исландия</option>
+            <option>Китай</option>
+            <option>Египет</option>
+            <option>Канада</option>
+            <option>Англия</option>
+            <option>Украина</option>
+        </select>
+    </div>
+    <button>Поиск</button>
+</div>
 <ul class="lots">
     <li class="list-item">
         <img class="img" src="~/Views/img/236018_4.jpeg" alt="Lot1" />
         <p class="name">Чайник для чая, Исландия</p>
         <p>Стартовая цена: <strong>100 грн</strong></p>
-        <p>Поднять на: <input class="input-group" type="text" name="stavka" placeholder="Минимальная ставка: 20"/></p>
+        <p>Поднять на: <input class="input-group" type="text" name="stavka" placeholder="Минимальная ставка: 20" /></p>
         <button class="button">Сделать ставку</button>
         <button class="button">Купить сейчас</button>
-        
-        
+
+
     </li>
     <li class="list-item">
         <img class="img" src="~/Views/img/berghoff_1104126_images_1491559128.jpg" alt="Lot2" />
@@ -58,24 +82,26 @@
 </ul>
 <button class="add_lot">Добавить товар для аукциона</button>
 <style>
-    h2{
-        text-align:center;
+    h2 {
+        text-align: center;
     }
-    .list-item{
-        display:inline-block;
-        margin:50px;
-    }
-    .button{
 
+    .list-item {
+        display: inline-block;
+        margin: 50px;
     }
-    .input-group{
-        
+
+    .button {
     }
-    .name{
-        font-size:20px;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    .input-group {
     }
-    
+
+    .name {
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
     .add_lot {
         display: block;
         background: #008884;
@@ -93,6 +119,10 @@
         width: 304px;
         font-size: 17px;
         margin-left: 400px;
+    }
+
+    .head_filter {
+        text-align: center;
     }
 </style>
 
