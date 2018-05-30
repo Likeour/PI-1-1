@@ -7,6 +7,7 @@ using DAL.Interfaces;
 using DAL.Entities.Catigories;
 using DAL.Entities;
 using System.Data.Entity;
+using System.Linq.Expressions;
 
 namespace DAL.Repositories.Catigorie
 {
@@ -34,6 +35,24 @@ namespace DAL.Repositories.Catigorie
         public IEnumerable<LotCatigorie> Find(Func<LotCatigorie, bool> predicate)
         {
             return db.LotCatigories.Where(predicate).ToList();
+        }
+
+        public virtual IList<T> GetList(Func<T, bool> where,
+             params Expression<Func<T, object>>[] navigationProperties)
+        {
+            List<T> list;
+                IQueryable<T> dbQuery = db.Set<T>();
+
+                //Apply eager loading
+                foreach (Expression<Func<T, object>> navigationProperty in navigationProperties)
+                    dbQuery = dbQuery.Include<T, object>(navigationProperty);
+
+                list = dbQuery
+                    .AsNoTracking()
+                    .Where(where)
+                    .ToList<T>();
+            
+            return list;
         }
 
         public LotCatigorie Get(int Id)

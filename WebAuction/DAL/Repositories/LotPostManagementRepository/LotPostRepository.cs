@@ -37,6 +37,7 @@ namespace DAL.Repositories.LotPostManagementRepository
             return db.LotPosts.Where(predicate).ToList();
         }
 
+
         public LotPost Get(int Id)
         {
             return db.LotPosts.Find(Id);
