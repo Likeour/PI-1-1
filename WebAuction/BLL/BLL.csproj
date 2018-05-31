@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="DTO\LotCategorie.cs" />
     <Compile Include="DTO\LotPostDTO.cs" />
+    <Compile Include="Infrastructure\ServicesModule.cs" />
     <Compile Include="Infrastructure\ValidationException.cs" />
     <Compile Include="Interfaces\ILots.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
