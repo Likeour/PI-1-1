@@ -268,7 +268,7 @@ namespace WebApp.Controllers
                 Authentication.SignIn(properties, oAuthIdentity, cookieIdentity);
             }
             else
-            {
+            {   
                 IEnumerable<Claim> claims = externalLogin.GetClaims();
                 ClaimsIdentity identity = new ClaimsIdentity(claims, OAuthDefaults.AuthenticationType);
                 Authentication.SignIn(identity);

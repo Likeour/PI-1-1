@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ninject.Modules;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,6 +7,11 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Ninject; 
+using Ninject.Modules;
+using Ninject.Web.Mvc;
+using BLL.Infrastructure;
+using WebApp.Util;
 
 namespace WebApp
 {
@@ -13,11 +19,20 @@ namespace WebApp
     {
         protected void Application_Start()
         {
+
+       //     GlobalConfiguration.Configure(WebApiConfig.Register);
+       
+
             AreaRegistration.RegisterAllAreas();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // внедрение зависимостей
+            NinjectModule  lotsModulle = new LotsModulle();
+            NinjectModule serviceModule = new ServiceModule("DefaultConnection");
+            var kernel = new StandardKernel(lotsModulle, serviceModule);
+            DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
         }
     }
 }
