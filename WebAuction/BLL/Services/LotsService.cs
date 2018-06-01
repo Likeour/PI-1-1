@@ -37,7 +37,7 @@ namespace BLL.Services
             return mapper.Map<IEnumerable<LotPost>, List<LotPostDTO>>(Database.LotPosts.Find(lot => lot.LotCatigorieId==categoryid));
         }
 
-        public LotPostDTO GetPhone(int? id)
+        public LotPostDTO GetLot(int? id)
         {
             if (id == null)
                 throw new ValidationException("Не установлено id лота", "");

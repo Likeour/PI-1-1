@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace BLL.Interfaces
 {
-    interface ILots
+   public  interface ILots
     {
         IList<LotPostDTO> GetLotsByCategory(int categoryId);
         IEnumerable<LotPostDTO> GetLots();
         LotPostDTO GetLot(int? id);
-        void Dispose();
+      //  void Dispose();
     }
 }
