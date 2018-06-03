@@ -37,7 +37,6 @@ namespace DAL.Repositories.Catigorie
             return db.LotCatigories.Where(predicate).ToList();
         }
 
-   
         public LotCatigorie Get(int Id)
         {
             return db.LotCatigories.Find(Id);

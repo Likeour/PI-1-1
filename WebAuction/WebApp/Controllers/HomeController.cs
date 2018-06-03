@@ -16,6 +16,11 @@ namespace WebApp.Controllers
     {
         ILots lotsService;
 
+        public HomeController()
+        {
+            this.lotsService = UIDependencyResolver<ILots>.ResolveDependency();
+        }
+
         public HomeController(ILots serv)
         {
             lotsService = serv;
@@ -27,6 +32,14 @@ namespace WebApp.Controllers
             var lots = mapper.Map<IEnumerable<LotPostDTO>, List<LotViewModel>>(lotsDtos);
             return View(lots);
         }
+
+    //    protected override void AutoComponentSetup(ILots lot)
+       // {
+         //   //Remove this if you want to skip all other previous registrations
+           // base.AutoComponentSetup(lot);
+
+            //AutoRegistration<ILots>((loc, type) => loc.Register<ILots>());
+        //}
 
     }
 }

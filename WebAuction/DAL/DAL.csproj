@@ -139,6 +139,7 @@
     <Compile Include="Repositories\CatigorieRepository\LotCatigorieRepository.cs" />
     <Compile Include="Repositories\EFUnitOfWork.cs" />
     <Compile Include="Repositories\LotPostManagementRepository\LotPostRepository.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -97,6 +97,7 @@
     <Compile Include="Infrastructure\ServicesModule.cs" />
     <Compile Include="Infrastructure\ValidationException.cs" />
     <Compile Include="Interfaces\ILots.cs" />
+    <Compile Include="Ninject\LogicBinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\LotsService.cs" />
   </ItemGroup>
