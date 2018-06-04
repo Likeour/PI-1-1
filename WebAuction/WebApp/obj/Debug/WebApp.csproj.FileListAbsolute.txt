@@ -283,3 +283,16 @@ D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebApp\bin\ru\Sys
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebApp\obj\Debug\WebApp.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebApp\obj\Debug\WebApp.pdb
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\AutoMapper.dll
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\BLL.dll
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\Ninject.dll
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\Ninject.Web.Common.dll
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\Ninject.Web.Common.WebHost.dll
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\Ninject.Web.Mvc.dll
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\BLL.pdb
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\BLL.dll.config
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\AutoMapper.xml
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\Ninject.xml
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\Ninject.Web.Common.xml
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\Ninject.Web.Common.WebHost.xml
+F:\Education\github\PI-1-1\WebAuction\WebApp\bin\Ninject.Web.Mvc.xml
