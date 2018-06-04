@@ -14,23 +14,10 @@ namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        ILots lotsService;
-
-        public HomeController()
-        {
-            this.lotsService = UIDependencyResolver<ILots>.ResolveDependency();
-        }
-
-        public HomeController(ILots serv)
-        {
-            lotsService = serv;
-        }
+       
         public ActionResult Index()
         {
-            IEnumerable<LotPostDTO> lotsDtos = lotsService.GetLots();
-            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<LotPostDTO, LotViewModel>()).CreateMapper();
-            var lots = mapper.Map<IEnumerable<LotPostDTO>, List<LotViewModel>>(lotsDtos);
-            return View(lots);
+            return View();
         }
 
     //    protected override void AutoComponentSetup(ILots lot)

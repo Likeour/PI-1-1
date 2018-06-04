@@ -16,5 +16,6 @@ namespace BLL.Ninject
         {
             Bind<IUnitOfWork>().To<UnitOfWork>();
         }
+
     }
 }

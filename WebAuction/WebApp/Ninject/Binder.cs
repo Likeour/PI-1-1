@@ -10,10 +10,12 @@ namespace WebApp.Ninject
 {
     public class Binder : NinjectModule
     {
+
         public override void Load()
         {
-            Bind<LotsService>().To<ILots>();
-           
+            Bind<ILots>().To<LotsService>();
+
         }
+
     }
 }
