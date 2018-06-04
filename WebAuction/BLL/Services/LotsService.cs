@@ -47,6 +47,7 @@ namespace BLL.Services
 
         public void AddCategory(CategorieDTO NewCategory)
         {
+
          
             UoW.Categories.Add(CategoryLogicMapper.Map<CategorieDTO, LotCatigorie>(NewCategory));
         }
