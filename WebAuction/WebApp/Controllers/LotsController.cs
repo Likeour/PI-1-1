@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using BLL.DTO;
 using BLL.Interfaces;
-using BLL.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
 using WebApp.Models;
 using WebApp.Ninject;
@@ -33,14 +33,38 @@ namespace WebApp.Controllers
         {
             this.LotsService = LotsService;
         }
-        
-        public ActionResult Index()
-        {
 
-         //   IEnumerable<CategorieDTO> cat = LotsControllerMapper.Map<CategorieDTO, CategoryViewModel>(LotsService.GetAllCategories());
-            return View();
-            
+
+
+       
+        // GET api/<controller>
+        /*public IEnumerable<string> Get()
+        {
+            return new string[] { "value1", "value2" };
         }
+
+        // GET api/<controller>/5
+        public string Get(int id)
+        {
+            return "value";
+        }
+        */
+        // POST api/<controller>
+        public void Post([FromBody]LotViewModel Lot)
+        {
+            int CategotyId = Lot.CategoryId;
+            Lot.CategoryId = new int();
+            LotsService.AddLot(CategotyId, LotsControllerMapper.Map<LotViewModel, LotPostDTO>(Lot));
+        }
+        public IEnumerable<LotViewModel> GetLots()
+        {
+            return LotsControllerMapper.Map<IEnumerable<LotPostDTO>, IEnumerable<LotViewModel>>(LotsService.GetAllLots());
+        }
+        public LotViewModel Get(int Id)
+        {
+            return LotsControllerMapper.Map<LotPostDTO, LotViewModel>(LotsService.GetLot(Id));
+        }
+
 
     }
 }

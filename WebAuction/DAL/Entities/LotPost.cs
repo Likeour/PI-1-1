@@ -18,7 +18,7 @@ namespace DAL.Entities.LotPostManagement
         public virtual double BuyPrice { get; set; }
         public virtual double CurrentPrice { get; set; }
 
-        [ForeignKey("User")]
+        [ForeignKey("CategoryId")]
         public virtual string PostedByID { get; set; }
        // public virtual ApplicationUser User { get; set; }
         public virtual string AnteCostId { get; set; }
@@ -35,12 +35,10 @@ namespace DAL.Entities.LotPostManagement
         [Column(TypeName = "Date")]
         public DateTime SalesDate { get; set; }
 
-        public int CategoryId { get; set; }
+       
         [ForeignKey("CategoryId")]
-        public virtual LotCatigorie Categories { get; set; }
-
-       // public virtual int LotCatigorieId { get; set; }
-        //public ICollection<LotCatigorie> LotCatigories { get; set; }
+        public virtual int CategoryId { get; set; }
+        public ICollection<LotCatigorie> LotCatigories { get; set; }
 
 
     }

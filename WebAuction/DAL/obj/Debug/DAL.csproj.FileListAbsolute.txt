@@ -171,3 +171,4 @@ F:\Education\newCourse\PI-1-1\WebAuction\DAL\obj\Debug\DAL.csproj.CoreCompileInp
 F:\Education\newCourse\PI-1-1\WebAuction\DAL\obj\Debug\DAL.csproj.CopyComplete
 F:\Education\newCourse\PI-1-1\WebAuction\DAL\obj\Debug\DAL.dll
 F:\Education\newCourse\PI-1-1\WebAuction\DAL\obj\Debug\DAL.pdb
+D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

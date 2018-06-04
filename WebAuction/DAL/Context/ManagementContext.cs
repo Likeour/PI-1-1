@@ -26,7 +26,6 @@ namespace DAL.Context
             .HasForeignKey(h => h.CategoryId)
             .WillCascadeOnDelete();
 
-
             base.OnModelCreating(modelBuilder);
         }
     }

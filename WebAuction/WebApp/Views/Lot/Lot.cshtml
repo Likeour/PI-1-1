@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Lot";
+   
+}
+<div class="container col-lg-push-4">
+    <h2>Adding new lot to category</h2>
+    <div class="form-group">
+        <label for="Categoryid">Id of Lot</label>
+        <input type="number" class="form-control" id="Categoryid" placeholder="Category id" name="Categoryid">
+        <label for="Title">title</label>
+        <input type="text" class="form-control" id="title" placeholder="title" name="title">
+        
+        <label for="Discription">Discription</label>
+        <input type="text" class="form-control" id="Discription" placeholder="Discription" name="Discription">
+
+        <label for="StartPrice">Price Of lot</label>
+        <input type="text" class="form-control" id="CurrentPrice" placeholder="CurrentPrice" name="CurrentPrice">
+        <label for="CurrentPrice">Current Price Of lot</label>
+        <input type="text" class="form-control" id="StartPrice" placeholder="StartPrice" name="StartPrice">
+        <label for="StartPrice">Buy price Of lot</label>
+        <input type="text" class="form-control" id="ButPrice" placeholder="ButPrice" name="ButPrice">
+        <label for="AnteCostId">Price of ante</label>
+        <input type="text" class="form-control" id="AnteCostId" placeholder="AnteCostId" name="AnteCostId">
+        <label for="LotCategory">Category:</label>
+        <input type="text" class="form-control" id="LotCategorieId" placeholder="LotCategoryId" name="LotCategoryId">
+        <label for="CreatedDate">CreatedDate:</label>
+        <input type="date" class="form-control" id="CreatedDate" placeholder="CreatedDate" name="CreatedDate">
+        <label for="StartDate">StartDate:</label>
+        <input type="date" class="form-control" id="StartDate" placeholder="StartDate" name="StartDate">
+
+        <label for="SalesDate">SalesDate:</label>
+        <input type="date" class="form-control" id="SalesDate" placeholder="SalesDate" name="SalesDate">
+
+       </div>
+    <button type="submit" class="btn btn-default" onclick="AddLot()">Submit</button>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+
+    function AddLot() {
+        var Lot = {
+            Categoryid: $('#CategoryId').val(),
+            Title: $('#title').val(),
+            Discription: $('#Discription').val(),
+            StartPrice: $('#StartPrice').val(),
+            BuyPrice: $('#BuyPrice').val(),
+            CurrentPrice: $('#CurrentPrice').val(),
+            AnteCostId: $('#AnteCostId').val(),
+            CreatedDate: $('#CreatedDate').val(),
+            StartDate: $('#StartDate').val(),
+            SalesDate: $('#SalesDate').val(),
+        }
+        if (HotelRoom.SleepingPlaces == 0)
+            alert('Enter amount of sleeping places')
+        else if (HotelRoom.Price == 0)
+            alert('Enter price for 1 night')
+        else {
+            $.ajax({
+                url: '/api/lot/',
+                type: 'POST',
+                dataType: 'JSON',
+                data: JSON.stringify(HotelRoom),
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    alert("Success")
+                },
+                error: function (error) {
+                    alert(error.responseText);
+                }
+            });
+        }
+
+    }
+    </script>
+}

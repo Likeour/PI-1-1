@@ -16,6 +16,9 @@ namespace BLL.Interfaces
         IEnumerable<LotPostDTO> GetAllLots();
         IEnumerable<LotPostDTO> GetLotsByCategory(int categoryId);
         LotPostDTO GetLot(int  id);
+        IEnumerable<LotPostDTO> FindLotByPrice(int MinPrice, int MaxPrice);
+
+
 
         void DeleteLot(int Id);
 

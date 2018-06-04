@@ -106,5 +106,10 @@ namespace BLL.Services
             UoW.Lots.Modify(lot.Id, lot);
         }
 
+        public IEnumerable<LotPostDTO> FindLotByPrice(int MinPrice, int MaxPrice)
+        {
+            return CategoryLogicMapper.Map<IEnumerable<LotPost>, List<LotPostDTO>>(UoW.Lots.GetAll(t => t.CurrentPrice >= MinPrice && t.CurrentPrice <= MaxPrice));
+        }
+
     }
 }
