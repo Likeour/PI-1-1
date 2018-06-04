@@ -45,9 +45,13 @@ namespace BLL.Services
             this.UoW = LogicDependencyResolver.ResolveUoW();
         }
 
+        public void AddLot(LotPostDTO lotPostDTO)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddCategory(CategorieDTO NewCategory)
         {
-         
             UoW.Categories.Add(CategoryLogicMapper.Map<CategorieDTO, LotCatigorie>(NewCategory));
         }
 
@@ -56,6 +60,12 @@ namespace BLL.Services
         {
 
             UoW.Lots.Delete(Id);
+        }
+
+        public void DeleteCatigories(int Id)
+        {
+
+            UoW.Categories.Delete(Id);
         }
 
         public void AddLot(int CategoryID, LotPostDTO NewPost)

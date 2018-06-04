@@ -80,6 +80,10 @@
       <Project>{2d4f86fb-ab80-4d24-9538-ddcb4b578315}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{3e71ebf5-81d8-4498-818e-591186ad057e}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApp\WebApp.csproj">
       <Project>{6414012b-2919-4eaa-aee5-7f60a818c50a}</Project>
       <Name>WebApp</Name>
