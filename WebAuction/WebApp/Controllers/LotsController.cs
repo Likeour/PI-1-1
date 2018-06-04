@@ -37,14 +37,10 @@ namespace WebApp.Controllers
         public ActionResult Index()
         {
 
-            IEnumerable<CategorieDTO> cat = LotsControllerMapper.Map<CategorieDTO, CategoryViewModel>(LotsService.GetAllCategories());
-            return View(cat);
+         //   IEnumerable<CategorieDTO> cat = LotsControllerMapper.Map<CategorieDTO, CategoryViewModel>(LotsService.GetAllCategories());
+            return View();
             
         }
 
-        public IEnumerable<CategoryViewModel> Get()
-        {
-            return LotsControllerMapper.Map<IEnumerable<CategorieDTO>, IEnumerable<CategoryViewModel>>(LotsService.GetAllLots());
-        }
     }
 }
