@@ -14,8 +14,6 @@ D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\Sys
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\System.Web.WebPages.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\System.Web.WebPages.Razor.dll
-D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\EntityFramework.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\DAL.pdb
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\AutoMapper.xml
@@ -29,8 +27,6 @@ D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\Sys
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\System.Web.WebPages.xml
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\System.Web.WebPages.Razor.xml
-D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\EntityFramework.xml
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\ru\System.Web.Helpers.resources.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\BLL\bin\Debug\ru\System.Web.Mvc.resources.dll

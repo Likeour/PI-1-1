@@ -28,7 +28,6 @@ D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bi
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\Owin.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\System.Web.Http.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\System.Web.Http.Owin.dll
-D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\System.Net.Http.Formatting.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\Newtonsoft.Json.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\EntityFramework.dll
@@ -64,7 +63,6 @@ D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bi
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\System.Web.Http.xml
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\System.Web.Http.Owin.xml
-D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\System.Net.Http.Formatting.xml
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\Newtonsoft.Json.xml
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\WebAuctionTest\bin\Debug\EntityFramework.xml

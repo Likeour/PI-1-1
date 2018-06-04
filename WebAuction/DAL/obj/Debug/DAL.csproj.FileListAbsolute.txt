@@ -82,8 +82,6 @@ D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\DAL\bin\Debug\ru\
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\DAL\bin\Debug\ru\System.Web.WebPages.resources.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\DAL\bin\Debug\ru\System.Web.WebPages.Deployment.resources.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\DAL\bin\Debug\ru\System.Web.WebPages.Razor.resources.dll
-D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\DAL\obj\Debug\DAL.Migrations.init.resources
-D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\DAL\obj\Debug\DAL.dll
 D:\НАУ\22sem\Arhiteche\KursProject\PI-1-1\PI-1-1\WebAuction\DAL\obj\Debug\DAL.pdb
 F:\Education\github\PI-1-1\WebAuction\DAL\bin\Debug\AutoMapper.dll

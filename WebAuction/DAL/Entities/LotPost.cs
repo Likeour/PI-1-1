@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebApp.Models;
 using DAL.Entities.Catigories;
 
 namespace DAL.Entities.LotPostManagement
@@ -21,7 +20,7 @@ namespace DAL.Entities.LotPostManagement
 
         [ForeignKey("User")]
         public virtual string PostedByID { get; set; }
-        public virtual ApplicationUser User { get; set; }
+       // public virtual ApplicationUser User { get; set; }
         public virtual string AnteCostId { get; set; }
 
         public virtual string Discription { get; set; }
