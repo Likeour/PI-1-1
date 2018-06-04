@@ -25,7 +25,8 @@ namespace WebApp.Models
         public DateTime? StartDate { get; set; }
         public DateTime? SalesDate { get; set; }
 
-        public int LotCatigorieId { get; set; }
-        public ICollection<CategoryViewModel> LotCatigories { get; set; }
+        
+        public int CategoryId { get; set; }   
+        public virtual CategoryViewModel Categories { get; set; }
     }
 }

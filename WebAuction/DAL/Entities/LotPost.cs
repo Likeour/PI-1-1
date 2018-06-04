@@ -35,9 +35,13 @@ namespace DAL.Entities.LotPostManagement
 
         [Column(TypeName = "Date")]
         public DateTime SalesDate { get; set; }
-        
-        public virtual int LotCatigorieId { get; set; }
-        public ICollection<LotCatigorie> LotCatigories { get; set; }
+
+        public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
+        public virtual LotCatigorie Categories { get; set; }
+
+       // public virtual int LotCatigorieId { get; set; }
+        //public ICollection<LotCatigorie> LotCatigories { get; set; }
 
 
     }

@@ -9,9 +9,17 @@ namespace BLL.Interfaces
 {
    public  interface ILots
     {
-        IList<LotPostDTO> GetLotsByCategory(int categoryId);
-        IEnumerable<LotPostDTO> GetLots();
-        LotPostDTO GetLot(int? id);
-      //  void Dispose();
+        void AddCategory(CategorieDTO NewCategory);
+        void AddLot(int CategoryId, LotPostDTO NewLot);
+
+        IEnumerable<CategorieDTO> GetAllCategories();
+        IEnumerable<LotPostDTO> GetAllLots();
+        IEnumerable<LotPostDTO> GetLotsByCategory(int categoryId);
+        LotPostDTO GetLot(int  id);
+
+        void DeleteLot(int Id);
+
+        void PayLot(int Id, double PayCost);
+        //  void Dispose();
     }
 }

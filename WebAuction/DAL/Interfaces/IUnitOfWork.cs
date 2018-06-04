@@ -11,9 +11,11 @@ namespace DAL.Interfaces
 {
     public interface IUnitOfWork
     {
-        IRepository<LotCatigorie> LotCatigories { get; }
+        IRepository<LotCatigorie> Categories { get; }
 
-        IRepository<LotPost> LotPosts { get; }
-        void Save();
+        IRepository<LotPost> Lots { get; }
+
+        //void Save();
+        void DeleteDB();
     }
 }

@@ -2,7 +2,9 @@
 using BLL.DTO;
 using BLL.Infrastructure;
 using BLL.Interfaces;
+using BLL.Ninject;
 using DAL.Entities;
+using DAL.Entities.Catigories;
 using DAL.Entities.LotPostManagement;
 using DAL.Interfaces;
 using System;
@@ -16,36 +18,82 @@ namespace BLL.Services
 {
     public class LotsService : ILots
     {
-        IUnitOfWork Database { get; set; }
+        IUnitOfWork UoW;
+        IMapper CategoryLogicMapper;
 
-        public LotsService(IUnitOfWork uow)
+        public LotsService(IUnitOfWork UoW)
         {
-            Database = uow;
-        }
-        
-        public IEnumerable<LotPostDTO> GetLots()
-        {
-            // применяем автомаппер для проекции одной коллекции на другую
-            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<LotPost, LotPostDTO>()).CreateMapper();
-            return mapper.Map<IEnumerable<LotPost>, List<LotPostDTO>>(Database.LotPosts.GetAll());
-        }
-
-        public IList<LotPostDTO> GetLotsByCategory(int categoryid)
-        {
-
-            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<LotPost, LotPostDTO>()).CreateMapper();
-            return mapper.Map<IEnumerable<LotPost>, List<LotPostDTO>>(Database.LotPosts.Find(lot => lot.LotCatigorieId==categoryid));
+            CategoryLogicMapper = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<CategorieDTO, LotCatigorie>();
+                cfg.CreateMap<LotPostDTO, LotPost>();
+                cfg.CreateMap<LotCatigorie, CategorieDTO>();
+                cfg.CreateMap<LotPost, LotPostDTO>();
+            }).CreateMapper();
+            this.UoW = UoW;
         }
 
-        public LotPostDTO GetLot(int? id)
+        public LotsService()
         {
-            if (id == null)
-                throw new ValidationException("Не установлено id лота", "");
-            var Lot = Database.LotPosts.Get(id.Value);
-            if (Lot == null)
-                throw new ValidationException("Лот не найден", "");
-
-            return new LotPostDTO { Id = Lot.Id, Title = Lot.Title, StartPrice = Lot.StartPrice, CurrentPrice = Lot.CurrentPrice, BuyPrice = Lot.BuyPrice, AnteCostId = Lot.AnteCostId, CreatedDate = Lot.CreatedDate, Discription = Lot.Discription, PostedByID =Lot.PostedByID, SalesDate= Lot.SalesDate, StartDate=Lot.StartDate, Image=Lot.Image, LotCatigorieId=Lot.LotCatigorieId};
+            CategoryLogicMapper = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<CategorieDTO, LotCatigorie>();
+                cfg.CreateMap<LotPostDTO, LotPost>();
+                cfg.CreateMap<LotCatigorie, CategorieDTO>();
+                cfg.CreateMap<LotPost, LotPostDTO>();
+            }).CreateMapper();
+            this.UoW = LogicDependencyResolver.ResolveUoW();
         }
+
+        public void AddCategory(CategorieDTO NewCategory)
+        {
+            UoW.Categories.Add(CategoryLogicMapper.Map<CategorieDTO, LotCatigorie>(NewCategory));
+        }
+
+
+        public void DeleteLot(int Id)
+        {
+
+            UoW.Lots.Delete(Id);
+        }
+
+        public void AddLot(int CategoryID, LotPostDTO NewPost)
+        {
+            LotCatigorie category = UoW.Categories.GetAll(x => x.Id == CategoryID, x => x.Lots).FirstOrDefault();
+            LotPost lot = CategoryLogicMapper.Map<LotPostDTO, LotPost>(NewPost);
+            lot.Categories= category;
+            category.Lots.Add(lot);
+            UoW.Categories.Modify(category.Id, category);
+        }
+
+        public IEnumerable<CategorieDTO> GetAllCategories()
+        {
+            return CategoryLogicMapper.Map<IEnumerable<LotCatigorie>, List<CategorieDTO>>(UoW.Categories.GetAll(h => h.Lots));
+        }
+
+        public LotPostDTO GetLot(int Id)
+        {
+            return CategoryLogicMapper.Map<LotPost, LotPostDTO>(UoW.Lots.GetAll(x => x.Id == Id).FirstOrDefault());
+        }
+
+        public IEnumerable<LotPostDTO> GetLotsByCategory(int categoryId)
+        {
+            return CategoryLogicMapper.Map<IEnumerable<LotPost>, List<LotPostDTO>>(UoW.Lots.GetAll(x => x.CategoryId == categoryId, x=>x.Categories));
+        }
+
+        public IEnumerable<LotPostDTO> GetAllLots()
+        {
+            return CategoryLogicMapper.Map<IEnumerable<LotPost>, List<LotPostDTO>>(UoW.Lots.GetAll());
+        }
+
+        public void PayLot(int Id, double PayCost)
+        { 
+            LotPost lot = UoW.Lots.GetAll(u => u.Id == Id).FirstOrDefault();
+            if (PayCost > lot.CurrentPrice)
+                lot.CurrentPrice = PayCost;
+            else lot.CurrentPrice += int.Parse(lot.AnteCostId);
+            UoW.Lots.Modify(lot.Id, lot);
+        }
+
     }
 }

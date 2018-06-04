@@ -92,12 +92,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\LotCategorie.cs" />
+    <Compile Include="DTO\CategorieDTO.cs" />
     <Compile Include="DTO\LotPostDTO.cs" />
     <Compile Include="Infrastructure\ServicesModule.cs" />
     <Compile Include="Infrastructure\ValidationException.cs" />
     <Compile Include="Interfaces\ILots.cs" />
     <Compile Include="Ninject\LogicBinder.cs" />
+    <Compile Include="Ninject\LogicDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\LotsService.cs" />
   </ItemGroup>

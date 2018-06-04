@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Entities.LotPostManagement;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,7 @@ namespace DAL.Entities.Catigories
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public virtual List<LotPost> Lots { get; set; }
+
     }
 }

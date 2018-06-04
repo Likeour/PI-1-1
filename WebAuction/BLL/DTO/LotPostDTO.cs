@@ -10,6 +10,20 @@ namespace BLL.DTO
 {
    public class LotPostDTO
     {
+        public LotPostDTO() { }
+        public LotPostDTO(String Title, double StartPrice, double BuyPrice, string PostedByID, string AnteCostId, string Discription, DateTime CreatedDate, DateTime StartDate, DateTime SalesDate , double CurrentPrice )
+        {
+            this.Title = Title;
+            this.StartDate = StartDate;
+            this.BuyPrice = BuyPrice;
+            this.PostedByID = PostedByID;
+            this.AnteCostId = AnteCostId;
+            this.Discription = Discription;
+            this.CreatedDate = CreatedDate;
+            this.StartDate = CreatedDate;
+            this.SalesDate = SalesDate;
+
+        }
         public int Id { get; set; }
 
         public string Title { get; set; }
@@ -29,8 +43,10 @@ namespace BLL.DTO
         public DateTime? StartDate { get; set; }
         public DateTime? SalesDate { get; set; }
 
-        public  int LotCatigorieId { get; set; }
-        public ICollection<LotCategorie> LotCatigories { get; set; }
+        public int CategoryId { get; set; }
+        public virtual CategorieDTO Category { get; set; }
+        
+       // public ICollection<CategorieDTO> LotCatigories { get; set; }
 
     }
 }

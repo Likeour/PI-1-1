@@ -124,10 +124,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\ManagementContext.cs" />
     <Compile Include="Entities\ApplicationDbContext.cs" />
-    <Compile Include="Entities\Catigorie\LotCatigorie.cs" />
+    <Compile Include="Entities\LotCatigorie.cs" />
     <Compile Include="Entities\IdentityModels.cs" />
-    <Compile Include="Entities\LotPostManagement\LotPost.cs" />
+    <Compile Include="Entities\LotPost.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Migrations\201805292117480_init.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CatigorieRepository\LotCatigorieRepository.cs" />
     <Compile Include="Repositories\EFUnitOfWork.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\LotPostManagementRepository\LotPostRepository.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>

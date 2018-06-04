@@ -8,13 +8,17 @@ using System.Threading.Tasks;
 namespace DAL.Interfaces
 {
     public interface IRepository<T> where T : class
-    {
-        IEnumerable<T> GetAll();
-        T Get(int Id);
-      //  IList<T> GetList(Func<T, bool> where, params Expression<Func<T, object>>[] navigationProperties);
-        IEnumerable<T> Find(Func<T, Boolean> predicate); //Encapsulates a method that has one parameter and returns a value of the type specified by second parameter.
-        void Create(T item);
-        void Update(T item);
+
+    { 
         void Delete(int Id);
+        void Delete(T Entity);
+        void Add(T Entity);
+        void Modify(int Id, T NewItem);
+        T Get(int Id);
+        T GetByPosition(int Position);
+        List<T> GetAll();
+        List<T> GetAll(params Expression<Func<T, object>>[] includeProperties);
+        List<T> GetAll(Func<T, bool> predicate, params Expression<Func<T, object>>[] includeProperties);
+
     }
 }
